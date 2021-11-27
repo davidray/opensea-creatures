@@ -18,15 +18,15 @@ contract PotorazziFactory is FactoryERC721, Ownable {
 
     address public proxyRegistryAddress;
     address public nftAddress;
-    string public baseURI = "https://creatures-api.opensea.io/api/factory/";
+    string public baseURI = "ipfs://Qmbpk1c4WabdLQ9VCVoemfy5i8BrWZVMH8JbrXpXtkCTqf/";
 
     /*
-     * Enforce the existence of only 100 Potorazzi.
+     * Enforce the existence of only 10000 Potorazzi.
      */
     uint256 CREATURE_SUPPLY = 10000;
 
     /*
-     * Three different options for minting Creatures (basic, premium, and gold).
+     * Only one option for minting
      */
     uint256 NUM_OPTIONS = 1;
     uint256 SINGLE_CREATURE_OPTION = 0;
