@@ -18,6 +18,6 @@ contract Potorazzi is ERC721Tradable {
     }
 
     function contractURI() public pure returns (string memory) {
-        return "https://creatures-api.opensea.io/contract/opensea-creatures";
+        return "ipfs://QmbfbMn2YFhz21LhJqS3rbbZmrc29HqZoWnuJDRyHaFCLF";
     }
 }
