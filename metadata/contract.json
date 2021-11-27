@@ -1,8 +1,8 @@
 {
-  "name": "Potorazzi",
-  "description": "A collaboration between world-renowned plein air painter Bryan Mark Taylor and two creative teenagers, Jake and Jasper, each NFT in this collection depicts a unique potato personality visiting the beautiful, intriguing worlds of Bryan Mark Taylor.",
-  "image": "ipfs://Qmb72vXo8JDpE8ApxuMpM5CSbhebw89f5uzdEnpGg7aSD6",
-  "external_link": "https://potorazzi.com",
-  "seller_fee_basis_points": 1000,
-  "fee_recipient": "0x094724362EB53bA0AF68E681baC415e347a89A15" 
+	"name": "Potorazzi",
+	"description": "A collaboration between world-renowned plein air painter Bryan Mark Taylor and two creative teenagers, Jake and Jasper, each NFT in this collection depicts a unique potato personality visiting the beautiful, intriguing worlds of Bryan Mark Taylor.",
+	"image": "https://gateway.pinata.cloud/ipfs/QmZkDFUEZ7MNX8SBh7xGshFXXfMZ47hJYk31rtDuRzvs9j",
+	"external_link": "https://potorazzi.com",
+	"seller_fee_basis_points": 1000,
+	"fee_recipient": "0x094724362EB53bA0AF68E681baC415e347a89A15"
 }

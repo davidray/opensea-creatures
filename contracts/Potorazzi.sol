@@ -14,10 +14,10 @@ contract Potorazzi is ERC721Tradable {
     {}
 
     function baseTokenURI() override public pure returns (string memory) {
-        return "ipfs://Qmbg8PufaMX9teWoGNs6ZSz3cnfDzp3ijUWNBWHUeX7iWP";
+        return "https://gateway.pinata.cloud/ipfs/QmRfzcmN7FVSDWccwVZeKFARECNLgYL4GoKsvH7PCD2Lg8";
     }
 
     function contractURI() public pure returns (string memory) {
-        return "ipfs://QmbfbMn2YFhz21LhJqS3rbbZmrc29HqZoWnuJDRyHaFCLF";
+        return "https://gateway.pinata.cloud/ipfs/QmNqtCLZZzJTm3r38VcqVeTUm24girMfereRrCpVByRAgx";
     }
 }

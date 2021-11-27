@@ -18,7 +18,7 @@ contract PotorazziFactory is FactoryERC721, Ownable {
 
     address public proxyRegistryAddress;
     address public nftAddress;
-    string public baseURI = "ipfs://Qmbpk1c4WabdLQ9VCVoemfy5i8BrWZVMH8JbrXpXtkCTqf/";
+    string public baseURI = "https://gateway.pinata.cloud/ipfs/QmeQTAGxyugmp9Eyvwmt2nAoLf1ztyCEozBHs1Nhne5Wuk";
 
     /*
      * Enforce the existence of only 10000 Potorazzi.
@@ -28,8 +28,9 @@ contract PotorazziFactory is FactoryERC721, Ownable {
     /*
      * Only one option for minting
      */
-    uint256 NUM_OPTIONS = 1;
+    uint256 NUM_OPTIONS = 2;
     uint256 SINGLE_CREATURE_OPTION = 0;
+    uint256 DOUBLE_CREATURE_OPTION = 1;
     
     constructor(address _proxyRegistryAddress, address _nftAddress) {
         proxyRegistryAddress = _proxyRegistryAddress;
@@ -92,7 +93,9 @@ contract PotorazziFactory is FactoryERC721, Ownable {
         uint256 numItemsAllocated = 0;
         if (_optionId == SINGLE_CREATURE_OPTION) {
             numItemsAllocated = 1;
-        } 
+        } else if (_optionId == DOUBLE_CREATURE_OPTION) {
+            numItemsAllocated = 2;
+        }
         return creatureSupply < (CREATURE_SUPPLY - numItemsAllocated);
     }
 
