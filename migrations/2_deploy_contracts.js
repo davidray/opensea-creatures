@@ -1,20 +1,28 @@
 const Potorazzi = artifacts.require("./Potorazzi.sol");
 const PotorazziFactory = artifacts.require("./PotorazziFactory.sol");
 
-// If you want to hardcode what deploys, comment out process.env.X and use
-// true/false;
 const DEPLOY_ALL = process.env.DEPLOY_ALL;
 
 const DEPLOY_CREATURES_SALE = process.env.DEPLOY_CREATURES_SALE || DEPLOY_ALL;
-// This is to keep the historical behavior of this migration.
-const DEPLOY_CREATURES =
-	process.env.DEPLOY_CREATURES || DEPLOY_CREATURES_SALE || DEPLOY_ALL;
+const DEPLOY_CREATURES = process.env.DEPLOY_CREATURES || DEPLOY_ALL;
+
+console.log(
+	"Running the deployer. DEPLOY_ALL=",
+	process.env.DEPLOY_ALL,
+	" DEPLOY_CREATURES_SALE=",
+	process.env.DEPLOY_CREATURES_SALE,
+	" DEPLOY_CREATURES=",
+	process.env.DEPLOY_CREATURES,
+);
 
 module.exports = async (deployer, network, addresses) => {
-	// OpenSea proxy registry addresses for rinkeby and mainnet.
 	let proxyRegistryAddress = "";
 	if (network === "rinkeby") {
 		proxyRegistryAddress = "0xf57b2c51ded3a29e6891aba85459d600256cf317";
+	} else if (network === "mumbai") {
+		proxyRegistryAddress = "0x58807bad0b376efc12f5ad86aac70e78ed67deae";
+	} else if (network === "polygon") {
+		proxyRegistryAddress = "0x58807bad0b376efc12f5ad86aac70e78ed67deae";
 	} else {
 		proxyRegistryAddress = "0xa5409ec958c83c3f309868babaca7c86dcb077c1";
 	}

@@ -18,7 +18,7 @@ contract PotorazziFactory is FactoryERC721, Ownable {
 
     address public proxyRegistryAddress;
     address public nftAddress;
-    string public baseURI = "https://gateway.pinata.cloud/ipfs/QmeQTAGxyugmp9Eyvwmt2nAoLf1ztyCEozBHs1Nhne5Wuk";
+    string public baseURI = "https://gateway.pinata.cloud/ipfs/QmeQTAGxyugmp9Eyvwmt2nAoLf1ztyCEozBHs1Nhne5Wuk/";
 
     /*
      * Enforce the existence of only 10000 Potorazzi.

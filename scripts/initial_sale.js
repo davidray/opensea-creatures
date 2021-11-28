@@ -42,7 +42,7 @@ const mnemonicWalletSubprovider = new MnemonicWalletSubprovider({
 	baseDerivationPath: BASE_DERIVATION_PATH,
 });
 const network =
-	NETWORK === "mainnet" || NETWORK === "live" ? "mainnet" : "rinkeby";
+	NETWORK === "mainnet" || NETWORK === "live" ? "mainnet" : "polygon-mumbai";
 const infuraRpcSubprovider = new RPCSubprovider({
 	rpcUrl: isInfura
 		? "https://" + network + ".infura.io/v3/" + NODE_API_KEY

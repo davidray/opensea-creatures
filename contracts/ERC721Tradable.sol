@@ -73,6 +73,7 @@ abstract contract ERC721Tradable is ContextMixin, ERC721Enumerable, NativeMetaTr
     function isApprovedForAll(address owner, address operator)
         override
         public
+        virtual
         view
         returns (bool)
     {
