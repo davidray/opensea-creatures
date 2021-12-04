@@ -6438,6 +6438,11 @@ dot-prop@^6.0.1:
   dependencies:
     is-obj "^2.0.0"
 
+dotenv@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
+
 dotignore@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/dotignore/-/dotignore-0.1.2.tgz#f942f2200d28c3a76fbdd6f0ee9f3257c8a2e905"
@@ -12265,7 +12270,7 @@ opencollective-postinstall@^2.0.0:
   resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
   integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
 
-opensea-js@^1.1.5:
+opensea-js@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/opensea-js/-/opensea-js-1.2.1.tgz#7df45cdebfa931ae9c4a1f4b992ff4ecb07a0e2f"
   integrity sha512-+28GsQTHpr7BQKehFil6aPAvHOUQkY6O0rD9xAx4O/974jSd7JSHPRhma5h4EAJ0RFRkDgvjh3hCikDeoCiM2w==
@@ -15493,7 +15498,7 @@ truffle-contract-size@^2.0.1:
     cli-table "^0.3.1"
     yargs "^15.3.1"
 
-truffle-flattener@^1.4.2:
+truffle-flattener@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/truffle-flattener/-/truffle-flattener-1.5.0.tgz#c358fa3e5cb0a663429f7912a58c4f0879414e64"
   integrity sha512-vmzWG/L5OXoNruMV6u2l2IaheI091e+t+fFCOR9sl46EE3epkSRIwGCmIP/EYDtPsFBIG7e6exttC9/GlfmxEQ==

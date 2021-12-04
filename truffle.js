@@ -24,11 +24,11 @@ const mainnetNodeUrl = isInfura
 
 const polygonNodeUrl = isInfura
 	? "https://polygon-mainnet.infura.io/v3/" + NODE_API_KEY
-	: "https://eth-mainnet.alchemyapi.io/v2/" + NODE_API_KEY;
+	: "https://polygon-mainnet.g.alchemy.com/v2/" + NODE_API_KEY;
 
 const polygonMumbaiNodeUrl = isInfura
 	? "https://polygon-mumbai.infura.io/v3/" + NODE_API_KEY
-	: "https://eth-mainnet.alchemyapi.io/v2/" + NODE_API_KEY;
+	: "https://polygon-mumbai.g.alchemy.com/v2/" + NODE_API_KEY;
 
 module.exports = {
 	networks: {

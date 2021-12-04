@@ -1,19 +1,6 @@
 const Potorazzi = artifacts.require("./Potorazzi.sol");
-const PotorazziFactory = artifacts.require("./PotorazziFactory.sol");
 
-const DEPLOY_ALL = process.env.DEPLOY_ALL;
-
-const DEPLOY_CREATURES_SALE = process.env.DEPLOY_CREATURES_SALE || DEPLOY_ALL;
-const DEPLOY_CREATURES = process.env.DEPLOY_CREATURES || DEPLOY_ALL;
-
-console.log(
-	"Running the deployer. DEPLOY_ALL=",
-	process.env.DEPLOY_ALL,
-	" DEPLOY_CREATURES_SALE=",
-	process.env.DEPLOY_CREATURES_SALE,
-	" DEPLOY_CREATURES=",
-	process.env.DEPLOY_CREATURES,
-);
+console.log("Running the deployer.");
 
 module.exports = async (deployer, network, addresses) => {
 	let proxyRegistryAddress = "";
@@ -27,18 +14,5 @@ module.exports = async (deployer, network, addresses) => {
 		proxyRegistryAddress = "0xa5409ec958c83c3f309868babaca7c86dcb077c1";
 	}
 
-	if (DEPLOY_CREATURES) {
-		await deployer.deploy(Potorazzi, proxyRegistryAddress, { gas: 5000000 });
-	}
-
-	if (DEPLOY_CREATURES_SALE) {
-		await deployer.deploy(
-			PotorazziFactory,
-			proxyRegistryAddress,
-			Potorazzi.address,
-			{ gas: 7000000 },
-		);
-		const creature = await Potorazzi.deployed();
-		await creature.transferOwnership(PotorazziFactory.address);
-	}
+	await deployer.deploy(Potorazzi, proxyRegistryAddress, { gas: 5000000 });
 };
