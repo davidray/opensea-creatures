@@ -23,5 +23,7 @@ module.exports = async (deployer, network, addresses) => {
 		proxyRegistryAddress = "0xa5409ec958c83c3f309868babaca7c86dcb077c1";
 	}
 
-	await deployer.deploy(Potorazzi, proxyRegistryAddress, { gas: 5000000 });
+	await deployer.deploy(Potorazzi, proxyRegistryAddress, payees, shares, {
+		gas: 5000000,
+	});
 };
