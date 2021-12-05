@@ -9,8 +9,12 @@ import "./ERC721Tradable.sol";
  * Potorazzi - a contract for my non-fungible Potorazzis.
  */
 contract Potorazzi is ERC721Tradable {
-	constructor(address _proxyRegistryAddress)
-		ERC721Tradable("Potorazzi", "PRZI", _proxyRegistryAddress)
+	constructor(
+		address _proxyRegistryAddress,
+		address[] memory _payees,
+		uint256[] memory _shares
+	)
+		ERC721Tradable("Potorazzi", "PRZI", _proxyRegistryAddress, _payees, _shares)
 	{}
 
 	function baseTokenURI() public pure override returns (string memory) {

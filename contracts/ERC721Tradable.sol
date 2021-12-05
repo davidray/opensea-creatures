@@ -7,7 +7,7 @@ import "openzeppelin-solidity/contracts/token/ERC721/extensions/ERC721Enumerable
 import "openzeppelin-solidity/contracts/access/Ownable.sol";
 import "openzeppelin-solidity/contracts/utils/math/SafeMath.sol";
 import "openzeppelin-solidity/contracts/utils/Strings.sol";
-
+import "openzeppelin-solidity/contracts/finance/PaymentSplitter.sol";
 import "./common/meta-transactions/ContentMixin.sol";
 import "./common/meta-transactions/NativeMetaTransaction.sol";
 
@@ -25,7 +25,8 @@ abstract contract ERC721Tradable is
 	ContextMixin,
 	ERC721Enumerable,
 	NativeMetaTransaction,
-	Ownable
+	Ownable,
+	PaymentSplitter
 {
 	using SafeMath for uint256;
 
@@ -35,8 +36,10 @@ abstract contract ERC721Tradable is
 	constructor(
 		string memory _name,
 		string memory _symbol,
-		address _proxyRegistryAddress
-	) ERC721(_name, _symbol) {
+		address _proxyRegistryAddress,
+		address[] memory _payees,
+		uint256[] memory _shares
+	) payable ERC721(_name, _symbol) PaymentSplitter(_payees, _shares) {
 		proxyRegistryAddress = _proxyRegistryAddress;
 		_initializeEIP712(_name);
 	}
